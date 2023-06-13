@@ -8,16 +8,20 @@ h1{
     text-shadow: 1px .5px 4px rgba(0, 0, 0, 0.6);
 }
 
-.container{
+.container {
     width: 450px;
     height: 450px;
     background-color: #faebd7
     border 2px solid black;
-    border-radius: 5% 5% 5% 5%;
+    border-radius: 5% ;
 }
 
+/*--------------------------------------------------------
+    SELECT ALL SQUARES IN THE ARRAY
+    ------------------------------------------*/
+
 .container .squares:nth-child(-n+4)  {
-    background-image: url("../images/creepy smile.png")
+    background-image: url("../images/smile.png")
     color #fff;
     float: left;
     width: 100px;
@@ -25,7 +29,7 @@ h1{
     margin: 5px;
     border: 1px solid black;
     border-radius: 25%;
-    cursor: pointer;
+    cursor: pointer; 
     transition: transform .5s ease-in-out;
 }
 
@@ -54,7 +58,7 @@ h1{
 }
 
 .container .squares:nth-child(-n+4):hover {
-    background-image: url("../images/smile.png");
+    background-image: url("../images/creepy\ smile.png");
     transform: scale(.5);
     animation-name: race;
     animation-duration:2.5;
@@ -79,85 +83,9 @@ h1{
 @keyframes race {
     0%, 100% {
         transform: translateY(0px);
-        background-image: url("../images/smile.png")
+        background-image: url("../images/creepy smile.png")
     }
     50% {
         transform: translateY(330px)
     }
-}
-
-.menu li:hover ul{
-    background-color: #5eafdf
-    color #fff;
-}
-
-.menu li:hover ul{
-    display:block
-    opacity 1;
-    /*While hovered, drop down-menu appears
-    This also avoids a block-level bug*/
-    visibility: visible;
-}
-
-.submenu {
-    padding: 0;
-    left: 0
-    position absolute;
-    top: 43.5px;
-    width: 125.5px;
-    opacity: 0;
-    /*While not hovered, drop down-menu hides
-    This also avoids a block-level bug*/
-    visibility: hidden;
-}
-
-.submenu li{
-    background-color: #387593;
-    display: block;
-    color: #B3B3B3;
-}
-
-.submenu li:hover{
-    color: #fff;
-    background-color: #5EAFDF;
-}
-body {
-    background: #184352;
-}
-
-.wrap {
-    top: 0;
-    left: 0'
-    height auto;
-    width: 100%;
-}
-
-.menu-container {
-    top:0;
-    left:0;
-    /*To the top edge of the screen*/
-    position:absolute;
-    width:100%;
-    background-color: #184352;
-}
-
-.menu {
-    font:bold 12px/18px sans-serif
-    text-align center;
-    display:inline;
-    margin: 0;
-    padding:0;
-    list-style: none;
-}
-
-.menu li {
-    color: #B3B3B3
-    display inline-block
-    margin-right -2px;
-    position: relative;
-    padding: 12px 40px;
-    border: 1px solid #9d9fa2
-    border-radius 1.5px;
-    background-color: #387593;
-    cursor:pointer;
 }
